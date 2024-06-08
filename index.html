@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/Pokeball-browser-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+    <title>Pokedex</title>
+
+</head>
+
+<body onload="render()">
+
+    <header class="header">
+        <section>
+            <img src="./img/Pokeball-1.png" alt="Pokeball">
+            <img src="./img/Pokedex-Logo.png" alt="Logo Pokedex">
+        </section>
+        <section>
+            <input type="text" id="search" class="input" placeholder="Geben Sie eine ID oder Namen ein" oninput="filterNames()">
+        </section>
+    </header>
+
+    <div id="pokemonContent" class="container"></div>
+
+    <div class="load-and-top-button-size">
+        <div>
+            <button id="load-more-button" class="load-more-button">Load More Pokémon</button>
+        </div>
+        <div>
+            <a href="#top"><img src="./img/Pfeil-nach-oben.png" alt=""></a>
+        </div>
+    </div>
+
+    <div id="cardOpen" class="card-background d-none">
+        <section class="container-open-card" id="pokemonContentOpenCard">
+            <!-- Popup content will be injected here -->
+        </section>
+
+    </div>
+
+    <div id="pokeballSpinner" class="pokeball-spinner" style="display: none;"></div>
+
+    <footer class="footer">
+        
+        <div>
+            <img src="./img/Pokeball-1.png" alt="">
+            <img src="./img/Pokedex-Logo.png" alt="">
+        </div>
+    </footer>
+
+    <script src="renderhtml.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
